@@ -1,0 +1,16 @@
+= form_for(post) do |f|
+
+  .field
+    = f.label :title
+    = f.text_field :title
+
+  .field
+    = f.label :body
+    = f.text_area :body
+
+  .field
+    = f.label :author_id
+    = f.number_field :author_id
+
+  .actions
+    = f.submit
