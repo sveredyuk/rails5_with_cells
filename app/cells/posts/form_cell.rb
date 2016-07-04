@@ -1,15 +1,11 @@
 module Posts
-  class FormCell < ApplicationCell
+  class FormCell < BaseCell
     cache :show
-
-    def show
-      render
-    end
 
     private
 
-    def post
-      model
+    def form_title
+      post.new_record? ? 'New Post' : 'Edit Post'
     end
   end
 end
